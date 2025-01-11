@@ -1,17 +1,16 @@
 const User = function (name, age, followers) {
   this.name = name;
   this.age = age;
-  this.followers = 10;
-
+  this.followers = followers;
+  getInfo(){
+    return`імя ${this.name}, вік ${this.age}, підписники ${this.followers}`
+  }
 };
 
 const mango = new User({
   name: "Mango",
   age: 2,
   followers: 20,
-  getInfo(){
-    return`імя ${this.name}, вік ${this.age}, підписники ${this.followers}`
-  }
 });
 
 mango.getInfo(); // User Mango is 2 years old and has 20 followers
